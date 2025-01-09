@@ -13,6 +13,7 @@ import java.util.List;
 @Setter
 @ToString
 @Entity
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @Table(name = "product")
 public class Product {
 
