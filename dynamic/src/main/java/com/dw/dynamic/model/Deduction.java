@@ -19,7 +19,7 @@ public class Deduction {
     private String formula;
 
     @OneToOne(mappedBy = "payrollTemplate")
-    private PayrollTemplate payrollTemplate;
+    private PayrollTemplate payrollTemplate;  // 양방향
 
 
 }

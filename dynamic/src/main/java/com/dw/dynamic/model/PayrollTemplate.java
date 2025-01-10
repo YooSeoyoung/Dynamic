@@ -17,12 +17,15 @@ public class PayrollTemplate {
 
     @OneToOne
     @JoinColumn(name = "deduction")
-    private Deduction deduction;
+    private Deduction deduction; // 양방향
 
     @OneToOne
     @JoinColumn(name = "employee")
-    private Employee employee;
+    private Employee employee; //양방향
 
+    @ManyToOne
+    @JoinColumn(name = "purchase_details")
+    private PurchaseDetails purchaseDetails;
 
 
 }

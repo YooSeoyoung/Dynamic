@@ -16,7 +16,7 @@ import java.util.List;
 @ToString
 @Entity
 @Table(name = "user")
-public class User {
+public class User { // 유저
     @Id
     @Column(name="user_id")
     private String id;
@@ -45,29 +45,29 @@ public class User {
     @Column(name = "point")
     private int point;
 
-    @ManyToMany(mappedBy = "userList")
-    private List<Course> courseList = new ArrayList<>();
+//    @ManyToMany(mappedBy = "userList")
+//    private List<Course> courseList = new ArrayList<>();
 
 
     @OneToOne(mappedBy = "user")
-    private Cart cart; // 장바구니
+    private Cart cart; // 장바구니(양방향)
 
     @ManyToOne
     @JoinColumn(name = "user_authority")
-    private Authority authority; // 권한
+    private Authority authority; // 권한(단방향)
 
     @OneToMany(mappedBy = "guide")
-    private List<Guide> guide; // 가이드
+    private List<Guide> guide; // 가이드(양방향)
 
     @OneToMany(mappedBy = "notice")
-    private List<Notice> notice; // 공지사항
+    private List<Notice> notice; // 공지사항(양방향)
 
     @OneToMany(mappedBy = "review")
-    private List<Review> review;  // 리뷰
+    private List<Review> review;  // 리뷰(양방향)
 
     @OneToMany(mappedBy = "board")
-    private List<Board> board;  // 게시판
+    private List<Board> board;  // 게시판(양방향)
 
     @OneToMany(mappedBy = "employee")
-    private List<Employee> employee; // 직원 관리
+    private List<Employee> employee; // 직원 관리(양방향)
 }

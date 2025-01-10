@@ -21,10 +21,10 @@ public class Cart {
     @Column(name = "quantity")
     private int quantity;
 
-    @OneToOne
+    @OneToOne // 양방향
     @JoinColumn(name = "user_name")
     private User user;
 
     @OneToMany(mappedBy = "product")
-    private List<Product> product;
+    private List<Product> product;  // 양방향
 }

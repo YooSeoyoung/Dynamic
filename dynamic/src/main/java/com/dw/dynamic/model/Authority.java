@@ -13,7 +13,7 @@ import lombok.*;
 @ToString
 @Entity
 @Table(name = "authority")
-public class Authority {
+public class Authority {  // 권한
     @Id
     @Column(name = "authority_name", length = 50)
     private String authorityName;

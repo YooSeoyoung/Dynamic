@@ -28,5 +28,5 @@ public class Board {
 
     @ManyToOne
     @JoinColumn(name = "user_name")
-    private User user;
+    private User user;  // 양방향
 }

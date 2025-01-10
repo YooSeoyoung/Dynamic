@@ -17,5 +17,5 @@ public class Payment {
 
     @ManyToOne
     @JoinColumn(name = "cart")
-    private Cart cart;
+    private Cart cart; // 단방향
 }

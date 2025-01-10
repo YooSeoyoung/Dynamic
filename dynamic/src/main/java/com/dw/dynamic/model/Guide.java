@@ -22,5 +22,5 @@ public class Guide {
 
     @ManyToOne
     @JoinColumn(name = "userName")
-    private User user;
+    private User user;  // 양방향
 }

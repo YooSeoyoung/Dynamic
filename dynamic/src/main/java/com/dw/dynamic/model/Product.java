@@ -13,7 +13,6 @@ import java.util.List;
 @Setter
 @ToString
 @Entity
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @Table(name = "product")
 public class Product {
 
@@ -26,10 +25,10 @@ public class Product {
 
     @ManyToOne
     @JoinColumn(name = "category")
-    private Category category;
+    private Category category;  // 단방향
 
     @ManyToOne
     @JoinColumn(name = "cart_id")
-    private Cart cart;
+    private Cart cart; // 양방향
 
 }
